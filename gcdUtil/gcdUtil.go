@@ -1,9 +1,9 @@
 package gcdutil
 
-func gcd(a, b int) int {
+func FindGcd(a, b int) int {
 
 	if b > a {
-		return gcd(b, a)
+		return FindGcd(b, a)
 	}
 	if b == 0 {
 		return a
@@ -11,5 +11,5 @@ func gcd(a, b int) int {
 	if b == 1 {
 		return 1
 	}
-	return gcd(a%b, b)
+	return FindGcd(a%b, b)
 }
